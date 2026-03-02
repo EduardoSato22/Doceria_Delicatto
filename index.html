@@ -7,13 +7,13 @@
   <meta name="keywords" content="ovos de páscoa, chocolate artesanal, doceria, páscoa 2026, Leticia Cristina, Perdões MG" />
   <meta property="og:title" content="Doceria Delicatto — Ovos de Páscoa 2026" />
   <meta property="og:description" content="Ovos artesanais com recheios que conquistam! Peça agora pelo WhatsApp." />
-  <meta property="og:image" content="./images/hero.jpg" />
+  <meta property="og:image" content="./images/hero.webp" />
   <meta name="theme-color" content="#5C2E0A" />
   <title>Doceria Delicatto 🐰 Ovos de Páscoa 2026</title>
 
   <link rel="stylesheet" href="./style.css" />
 
-  <link rel="preload" as="image" href="./images/hero.jpg" />
+  <link rel="preload" as="image" href="./images/hero.webp" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo" aria-label="Doceria Delicatto">
-        <img src="./images/logo.png" alt="Logo Doceria Delicatto" class="nav-logo-img">
+        <img src="./images/logo.webp" alt="Logo Doceria Delicatto" class="nav-logo-img">
         Doceria Delicatto
       </a>
       <div class="nav-links">
@@ -34,10 +34,23 @@
         <a href="#infos">Informações</a>
         <a href="#contato">Contato</a>
       </div>
-      <a href="#produtos" class="btn-choco" style="font-size:13px;padding:9px 20px">Ver Cardápio ↓</a>
+      <a href="#produtos" class="btn-choco nav-desktop-btn" style="font-size:13px;padding:9px 20px">Ver Cardápio ↓</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMobileMenu()">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-links">
+    <a href="#produtos" onclick="toggleMobileMenu()">Cardápio</a>
+    <a href="#sobre" onclick="toggleMobileMenu()">Sobre Nós</a>
+    <a href="#infos" onclick="toggleMobileMenu()">Informações</a>
+    <a href="#contato" onclick="toggleMobileMenu()">Contato</a>
+  </div>
+</div>
 
 <div id="urgencia" role="alert" aria-label="Aviso de prazo">
   <div class="urg-inner">
@@ -73,7 +86,7 @@
       </div>
       <div class="hero-img-wrap fade-up d2">
         <div class="hero-blob">
-          <img src="./images/hero.jpg"
+          <img src="./images/hero.webp"
                alt="Ovo de Páscoa Ninho com Nutella da Doceria Delicatto"
                width="440" height="440"
                fetchpriority="high" />
@@ -159,9 +172,47 @@
       <h2 id="depoi-title" class="section-title">Quem prova, <em>volta sempre</em></h2>
     </div>
     <div class="dep-grid">
-      <div class="dep-card"><div class="dep-stars">⭐⭐⭐⭐⭐</div><p class="dep-text">"O Ninho com Nutella é perfeito! Os docinhos por cima são um charme. Comprei 3 pra família e todo mundo amou. Embalagem super caprichada!"</p><div class="dep-author"><div class="dep-av">👩</div><div><div class="dep-name">Ana Paula M.</div><div class="dep-city">Três Corações, MG</div></div></div></div>
-      <div class="dep-card"><div class="dep-stars">⭐⭐⭐⭐⭐</div><p class="dep-text">"Pedi o Ferrero Rocher e fiquei encantada! Recheio cremoso cheio de castanha. A embalagem ficou linda como presente. Já reservei para 2026!"</p><div class="dep-author"><div class="dep-av">👩‍🦱</div><div><div class="dep-name">Camila R.</div><div class="dep-city">Varginha, MG</div></div></div></div>
-      <div class="dep-card"><div class="dep-stars">⭐⭐⭐⭐⭐</div><p class="dep-text">"Comprei o kit degustação e o infantil pro meu filho. As guloseimas dentro deixaram ele louco de feliz! Atendimento da Leticia é nota 10!"</p><div class="dep-author"><div class="dep-av">👨</div><div><div class="dep-name">Ricardo S.</div><div class="dep-city">Perdões, MG</div></div></div></div>
+      <div class="dep-card">
+        <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+        <p class="dep-text">"O Ninho com Nutella é perfeito! Os docinhos por cima são um charme. Comprei 3 pra família e todo mundo amou. Embalagem super caprichada!"</p>
+        <div class="dep-author">
+          <div class="dep-av">
+            <img src="./images/cliente1.webp" alt="Ana Paula M." style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+          <div>
+            <div class="dep-name">Ana Paula M.</div>
+            <div class="dep-city">Lavras, MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+        <p class="dep-text">"Pedi o Ferrero Rocher e fiquei encantada! Recheio cremoso cheio de castanha. A embalagem ficou linda como presente. Já reservei para 2026!"</p>
+        <div class="dep-author">
+          <div class="dep-av">
+            <img src="./images/cliente2.webp" alt="Camila R." style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+          <div>
+            <div class="dep-name">Camila R.</div>
+            <div class="dep-city">Lavras, MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+        <p class="dep-text">"Comprei o kit degustação e o infantil pro meu filho. As guloseimas dentro deixaram ele louco de feliz! Atendimento da Leticia é nota 10!"</p>
+        <div class="dep-author">
+          <div class="dep-av">
+            <img src="./images/cliente3.webp" alt="Ricardo S." style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+          <div>
+            <div class="dep-name">Ricardo S.</div>
+            <div class="dep-city">Lavras, MG</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -218,7 +269,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">
-        <img src="./images/logo.png" alt="Logo Doceria Delicatto" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
+        <img src="./images/logo.webp" alt="Logo Doceria Delicatto" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
         Doceria Delicatto
       </div>
       <nav class="footer-links" aria-label="Links do rodapé">
