@@ -127,7 +127,10 @@ button:focus-visible, a:focus-visible {
 .nav-toggle { display: none; padding: 10px; font-size: 24px; color: var(--choco); }
 
 @media(max-width:700px){ 
-  .nav-links { display:none; } 
+  /* Esconde os links de texto E o botão de atalho no mobile */
+  .nav-links, .nav-desktop-btn { display: none !important; } 
+  
+  /* Mostra o menu hambúrguer */
   .nav-toggle { display: flex; align-items: center; justify-content: center; }
 }
 
